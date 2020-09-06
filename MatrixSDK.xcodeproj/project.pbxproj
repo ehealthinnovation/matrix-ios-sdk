@@ -529,16 +529,16 @@
 		32FE41371D0AB7070060835E /* MXEnumConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FE41351D0AB7070060835E /* MXEnumConstants.m */; };
 		32FFB4F0217E146A00C96002 /* MXRecoveryKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 32FFB4EE217E146A00C96002 /* MXRecoveryKey.h */; };
 		32FFB4F1217E146A00C96002 /* MXRecoveryKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FFB4EF217E146A00C96002 /* MXRecoveryKey.m */; };
-		5005659A250523A100A4CE08 /* MXJingleCallAudioSessionConfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = 5005658E250523A100A4CE08 /* MXJingleCallAudioSessionConfigurator.h */; };
-		5005659B250523A100A4CE08 /* MXJingleVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5005658F250523A100A4CE08 /* MXJingleVideoView.h */; };
+		5005659A250523A100A4CE08 /* MXJingleCallAudioSessionConfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = 5005658E250523A100A4CE08 /* MXJingleCallAudioSessionConfigurator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5005659B250523A100A4CE08 /* MXJingleVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5005658F250523A100A4CE08 /* MXJingleVideoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5005659C250523A100A4CE08 /* MXJingleCameraCaptureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50056590250523A100A4CE08 /* MXJingleCameraCaptureController.m */; };
 		5005659D250523A100A4CE08 /* MXJingleCallStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 50056591250523A100A4CE08 /* MXJingleCallStack.m */; };
 		5005659E250523A100A4CE08 /* MXJingleCallStackCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 50056592250523A100A4CE08 /* MXJingleCallStackCall.m */; };
 		5005659F250523A100A4CE08 /* MXJingleVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50056593250523A100A4CE08 /* MXJingleVideoView.m */; };
 		500565A0250523A100A4CE08 /* MXJingleCallAudioSessionConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 50056594250523A100A4CE08 /* MXJingleCallAudioSessionConfigurator.m */; };
-		500565A1250523A100A4CE08 /* MXJingleCallStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 50056595250523A100A4CE08 /* MXJingleCallStack.h */; };
-		500565A2250523A100A4CE08 /* MXJingleCameraCaptureController.h in Headers */ = {isa = PBXBuildFile; fileRef = 50056596250523A100A4CE08 /* MXJingleCameraCaptureController.h */; };
-		500565A3250523A100A4CE08 /* MXJingleCallStackCall.h in Headers */ = {isa = PBXBuildFile; fileRef = 50056597250523A100A4CE08 /* MXJingleCallStackCall.h */; };
+		500565A1250523A100A4CE08 /* MXJingleCallStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 50056595250523A100A4CE08 /* MXJingleCallStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		500565A2250523A100A4CE08 /* MXJingleCameraCaptureController.h in Headers */ = {isa = PBXBuildFile; fileRef = 50056596250523A100A4CE08 /* MXJingleCameraCaptureController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		500565A3250523A100A4CE08 /* MXJingleCallStackCall.h in Headers */ = {isa = PBXBuildFile; fileRef = 50056597250523A100A4CE08 /* MXJingleCallStackCall.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		500565A4250523C200A4CE08 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA3A91524DB327800F851FE /* AVFoundation.framework */; };
 		500565A5250523C700A4CE08 /* CallKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA3A90D24DB0A8700F851FE /* CallKit.framework */; };
 		500565A6250523C700A4CE08 /* OLMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA3A80124DA002900F851FE /* OLMKit.framework */; };
@@ -553,6 +553,16 @@
 		500565B12505240900A4CE08 /* JitsiMeet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 500565AD2505240900A4CE08 /* JitsiMeet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		500565B52505247C00A4CE08 /* JitsiMeet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500565AD2505240900A4CE08 /* JitsiMeet.framework */; };
 		500565B62505247C00A4CE08 /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500565AC2505240900A4CE08 /* WebRTC.framework */; };
+		50560BA62505412D00C391E1 /* MXJingleCameraCaptureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50056590250523A100A4CE08 /* MXJingleCameraCaptureController.m */; };
+		50560BA72505412D00C391E1 /* MXJingleCallStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 50056591250523A100A4CE08 /* MXJingleCallStack.m */; };
+		50560BA82505412D00C391E1 /* MXJingleCallStackCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 50056592250523A100A4CE08 /* MXJingleCallStackCall.m */; };
+		50560BA92505412D00C391E1 /* MXJingleVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50056593250523A100A4CE08 /* MXJingleVideoView.m */; };
+		50560BAA2505412D00C391E1 /* MXJingleCallAudioSessionConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 50056594250523A100A4CE08 /* MXJingleCallAudioSessionConfigurator.m */; };
+		50560BAB2505413300C391E1 /* MXJingleCallAudioSessionConfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = 5005658E250523A100A4CE08 /* MXJingleCallAudioSessionConfigurator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50560BAC2505413300C391E1 /* MXJingleVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5005658F250523A100A4CE08 /* MXJingleVideoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50560BAD2505413300C391E1 /* MXJingleCallStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 50056595250523A100A4CE08 /* MXJingleCallStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50560BAE2505413300C391E1 /* MXJingleCameraCaptureController.h in Headers */ = {isa = PBXBuildFile; fileRef = 50056596250523A100A4CE08 /* MXJingleCameraCaptureController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50560BAF2505413300C391E1 /* MXJingleCallStackCall.h in Headers */ = {isa = PBXBuildFile; fileRef = 50056597250523A100A4CE08 /* MXJingleCallStackCall.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		71DE22E01BC7C51200284153 /* MXReceiptData.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DE22DC1BC7C51200284153 /* MXReceiptData.m */; };
 		71DE22E11BC7C51200284153 /* MXReceiptData.h in Headers */ = {isa = PBXBuildFile; fileRef = 71DE22DD1BC7C51200284153 /* MXReceiptData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92634B7F1EF2A37A00DB9F60 /* MXCallAudioSessionConfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = 92634B7E1EF2A37A00DB9F60 /* MXCallAudioSessionConfigurator.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -4097,6 +4107,7 @@
 				AEA3A50E24D9C1A400F851FE /* MXRealmEventScan.h in Headers */,
 				AEA3A52324D9C1A400F851FE /* MXSecretStoragePassphrase.h in Headers */,
 				AEA3A48B24D9C1A300F851FE /* MXIncomingSASTransaction.h in Headers */,
+				50560BAD2505413300C391E1 /* MXJingleCallStack.h in Headers */,
 				AEA3A57224D9C1A400F851FE /* MXLogger.h in Headers */,
 				AEA3A59424D9C1A400F851FE /* MXCrossSigning.h in Headers */,
 				AEA3A44924D9C1A300F851FE /* MXScanRealmInMemoryProvider.h in Headers */,
@@ -4133,6 +4144,8 @@
 				AEA3A51224D9C1A400F851FE /* MXMegolmExportEncryption.h in Headers */,
 				AEA3A4E424D9C1A400F851FE /* MXEventScan.h in Headers */,
 				AEA3A5E324D9C1A400F851FE /* MXIdentityService.h in Headers */,
+				50560BAB2505413300C391E1 /* MXJingleCallAudioSessionConfigurator.h in Headers */,
+				50560BAF2505413300C391E1 /* MXJingleCallStackCall.h in Headers */,
 				AEA3A49D24D9C1A300F851FE /* MXQueuedEncryption.h in Headers */,
 				AEA3A3CB24D9C1A300F851FE /* MXReactionCountChange.h in Headers */,
 				AEA3A4D824D9C1A300F851FE /* MXServerNoticeContent.h in Headers */,
@@ -4249,6 +4262,7 @@
 				AEA3A40A24D9C1A300F851FE /* MXKeyVerification.h in Headers */,
 				AEA3A58D24D9C1A400F851FE /* MXRecoveryService_Private.h in Headers */,
 				AEA3A44C24D9C1A300F851FE /* MXReceiptData.h in Headers */,
+				50560BAE2505413300C391E1 /* MXJingleCameraCaptureController.h in Headers */,
 				AEA3A84824DA17C300F851FE /* MXAggregationPaginatedResponse_Private.h in Headers */,
 				AEA3A3E124D9C1A300F851FE /* MXKeyVerificationByDMRequest.h in Headers */,
 				AEA3A5E624D9C1A400F851FE /* MXMegolmDecryption.h in Headers */,
@@ -4300,6 +4314,7 @@
 				AEA3A51124D9C1A400F851FE /* MXNoStore.h in Headers */,
 				AEA3A40C24D9C1A300F851FE /* MXCryptoStore.h in Headers */,
 				AEA3A5BB24D9C1A400F851FE /* MXInvite3PID.h in Headers */,
+				50560BAC2505413300C391E1 /* MXJingleVideoView.h in Headers */,
 				AEA3A3DA24D9C1A300F851FE /* MXFileStoreMetaData.h in Headers */,
 				AEA3A40024D9C1A300F851FE /* MXRecoveryKey.h in Headers */,
 				AEA3A5E724D9C1A400F851FE /* MXUser.h in Headers */,
@@ -5180,6 +5195,7 @@
 				AEA3A49224D9C1A300F851FE /* MXRoomPredecessorInfo.m in Sources */,
 				AEA3A5CB24D9C1A400F851FE /* MXCryptoConstants.m in Sources */,
 				AEA3A50D24D9C1A400F851FE /* MXIncomingRoomKeyRequestManager.m in Sources */,
+				50560BA92505412D00C391E1 /* MXJingleVideoView.m in Sources */,
 				AEA3A4FF24D9C1A400F851FE /* MXEncryptedAttachments.m in Sources */,
 				AEA3AA2924DB53AD00F851FE /* MXRestClient.swift in Sources */,
 				AEA3AA2024DB53A300F851FE /* MX3PID.swift in Sources */,
@@ -5254,6 +5270,7 @@
 				AEA3A41624D9C1A300F851FE /* MXMegolmBackupAuthData.m in Sources */,
 				AEA3A49024D9C1A300F851FE /* MXReplyEventBodyParts.m in Sources */,
 				AEA3A4C724D9C1A300F851FE /* MXPushRuleEventMatchConditionChecker.m in Sources */,
+				50560BAA2505412D00C391E1 /* MXJingleCallAudioSessionConfigurator.m in Sources */,
 				AEA3A4D324D9C1A300F851FE /* MXSDKOptions.m in Sources */,
 				AEA3A3CD24D9C1A300F851FE /* MXRealmAggregationsStore.m in Sources */,
 				AEA3A47924D9C1A300F851FE /* MXKeyVerificationMac.m in Sources */,
@@ -5266,6 +5283,7 @@
 				AEA3A3ED24D9C1A300F851FE /* MXJSONModel.m in Sources */,
 				AEA3A5CC24D9C1A400F851FE /* MXNotificationCenter.m in Sources */,
 				AEA3A57F24D9C1A400F851FE /* MXEventAnnotation.m in Sources */,
+				50560BA82505412D00C391E1 /* MXJingleCallStackCall.m in Sources */,
 				AEA3A53024D9C1A400F851FE /* MXEventsEnumeratorOnArray.m in Sources */,
 				AEA3A53924D9C1A400F851FE /* MXIncomingRoomKeyRequestCancellation.m in Sources */,
 				AEA3A58624D9C1A400F851FE /* MXSendReplyEventDefaultStringLocalizations.m in Sources */,
@@ -5288,6 +5306,7 @@
 				AEA3AA1E24DB53A300F851FE /* MXRoom.swift in Sources */,
 				AEA3A51C24D9C1A400F851FE /* MXTransactionCancelCode.m in Sources */,
 				AEA3A58824D9C1A400F851FE /* MXRoomCreateContent.m in Sources */,
+				50560BA72505412D00C391E1 /* MXJingleCallStack.m in Sources */,
 				AEA3A5BA24D9C1A400F851FE /* MXSecretStorage.m in Sources */,
 				AEA3A57524D9C1A400F851FE /* MXAggregatedEditsUpdater.m in Sources */,
 				AEA3A5E224D9C1A400F851FE /* MXError.m in Sources */,
@@ -5335,6 +5354,7 @@
 				AEA3AA2A24DB53AD00F851FE /* MXIdentityService.swift in Sources */,
 				AEA3A4A724D9C1A300F851FE /* MXKeyVerificationJSONModel.m in Sources */,
 				AEA3A43324D9C1A300F851FE /* MXQRCodeData.m in Sources */,
+				50560BA62505412D00C391E1 /* MXJingleCameraCaptureController.m in Sources */,
 				AEA3A4CD24D9C1A300F851FE /* MXRoomFilter.m in Sources */,
 				AEA3A3D224D9C1A300F851FE /* MXKeyVerificationAccept.m in Sources */,
 				AEA3A47624D9C1A300F851FE /* MXOlmDevice.m in Sources */,
