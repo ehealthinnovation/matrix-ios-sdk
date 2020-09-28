@@ -25,12 +25,12 @@
 /**
  The default max attempts.
  */
-#define MXHTTPOPERATION_DEFAULT_MAX_RETRIES 4
+#define MXHTTPOPERATION_DEFAULT_MAX_RETRIES 2 //4
 
 /**
  The default max time a request can be retried.
  */
-#define MXHTTPOPERATION_DEFAULT_MAX_TIME_MS 180000
+#define MXHTTPOPERATION_DEFAULT_MAX_TIME_MS 5000 //180000
 
 
 @interface MXHTTPOperation ()
@@ -81,7 +81,7 @@
     _operation = operation.operation;
     creationDate = operation->creationDate;
     _numberOfTries = operation.numberOfTries;
-    _maxNumberOfTries = operation.maxRetriesTime;
+    _maxNumberOfTries = operation.maxNumberOfTries;
     _maxRetriesTime = operation.maxRetriesTime;
 
     // If the current operation was canceled, cancel the new one to avoid
