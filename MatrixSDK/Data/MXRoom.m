@@ -710,14 +710,14 @@ NSString *const kMXRoomInitialSyncNotification = @"kMXRoomInitialSyncNotificatio
         }
         
         //if the server is not reachable, fail right away.
-        #ifdef DEBUG
+        //#ifdef DEBUG
         NSLog(@"session state: %lu", mxSession.state);
-        #endif
+        //#endif
 
         if (mxSession.state == MXSessionStateHomeserverNotReachable) {
-            #ifdef DEBUG
+            //#ifdef DEBUG
             NSLog(@"server not reachable, flagging message as failed");
-            #endif
+            //#endif
             event.sentState = MXEventSentStateFailed;
 
             // Update the stored echo.
