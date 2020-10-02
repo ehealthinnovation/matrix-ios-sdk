@@ -708,6 +708,19 @@ NSString *const kMXRoomInitialSyncNotification = @"kMXRoomInitialSyncNotificatio
                 [self updateOutgoingMessage:event.eventId withOutgoingMessage:event];
             }
         }
+        
+        //if the server is not reachable, fail right away.
+        if (mxSession.state == MXSessionStateHomeserverNotReachable) {
+            #ifdef DEBUG
+            NSLog(@"server not reachable, flagging message as failed");
+            #endif
+            event.sentState = MXEventSentStateFailed;
+
+            // Update the stored echo.
+            [self updateOutgoingMessage:event.eventId withOutgoingMessage:event];
+            
+            return nil;
+        }
 
         roomOperation = [self preserveOperationOrder:event block:^{
             MXHTTPOperation *operation = [self _sendEventOfType:eventTypeString content:contentCopy txnId:event.eventId success:onSuccess failure:onFailure];
