@@ -81,7 +81,7 @@
     _operation = operation.operation;
     creationDate = operation->creationDate;
     _numberOfTries = operation.numberOfTries;
-    _maxNumberOfTries = operation.maxRetriesTime;
+    _maxNumberOfTries = operation.maxNumberOfTries;
     _maxRetriesTime = operation.maxRetriesTime;
 
     // If the current operation was canceled, cancel the new one to avoid

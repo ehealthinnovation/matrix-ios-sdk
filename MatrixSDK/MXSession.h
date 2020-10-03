@@ -646,6 +646,7 @@ typedef void (^MXOnBackgroundSyncFail)(NSError *error);
  */
 - (void)releasePreventPause;
 
+- (void)setState:(MXSessionState)state;
 
 #pragma mark - Options
 /*
