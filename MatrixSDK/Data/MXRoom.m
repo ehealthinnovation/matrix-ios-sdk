@@ -925,6 +925,18 @@ NSString *const kMXRoomInitialSyncNotification = @"kMXRoomInitialSyncNotificatio
         [self handleNextOperationAfter:roomOperation];
     };
     
+    //if the server is not reachable, fail right away.
+    if (self.mxSession.state == MXSessionStateHomeserverNotReachable) {
+        NSLog(@"server not reachable, flagging image message as failed");
+
+        event.sentState = MXEventSentStateFailed;
+
+        // Update the stored echo.
+        [self updateOutgoingMessage:event.eventId withOutgoingMessage:event];
+
+        return nil;
+    }
+
     // Add a local echo for this message during the sending process.
     MXEventSentState initialSentState = (mxSession.crypto && self.summary.isEncrypted) ? MXEventSentStateEncrypting : MXEventSentStateUploading;
     event = [self addLocalEchoForMessageContent:msgContent eventType:kMXEventTypeStringRoomMessage withState:initialSentState];
@@ -1044,18 +1056,6 @@ NSString *const kMXRoomInitialSyncNotification = @"kMXRoomInitialSyncNotificatio
 
                 // Update the message content with the mxc:// of the media on the homeserver
                 msgContent[@"url"] = url;
-
-                //if the server is not reachable, fail right away.
-                if (self.mxSession.state == MXSessionStateHomeserverNotReachable) {
-                    NSLog(@"server not reachable, flagging message as failed");
-
-                    event.sentState = MXEventSentStateFailed;
-
-                    // Update the stored echo.
-                    [self updateOutgoingMessage:event.eventId withOutgoingMessage:event];
-
-                    return;
-                }
 
                 // Make the final request that posts the image event (the sent state of the local echo will be updated, its local storage too).
                 MXHTTPOperation *operation2 = [self sendMessageWithContent:msgContent localEcho:&event success:onSuccess failure:onFailure];
