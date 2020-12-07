@@ -934,7 +934,7 @@ NSString *const kMXRoomInitialSyncNotification = @"kMXRoomInitialSyncNotificatio
         // Update the stored echo.
         [self updateOutgoingMessage:event.eventId withOutgoingMessage:event];
 
-        return nil;
+        return;
     }
 
     // Add a local echo for this message during the sending process.
