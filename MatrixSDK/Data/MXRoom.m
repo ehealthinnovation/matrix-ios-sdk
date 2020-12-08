@@ -925,6 +925,16 @@ NSString *const kMXRoomInitialSyncNotification = @"kMXRoomInitialSyncNotificatio
         [self handleNextOperationAfter:roomOperation];
     };
     
+    // Add a local echo for this message during the sending process.
+    MXEventSentState initialSentState = (mxSession.crypto && self.summary.isEncrypted) ? MXEventSentStateEncrypting : MXEventSentStateUploading;
+    event = [self addLocalEchoForMessageContent:msgContent eventType:kMXEventTypeStringRoomMessage withState:initialSentState];
+    
+    if (localEcho)
+    {
+        // Return the created event.
+        *localEcho = event;
+    }
+
     //if the server is not reachable, fail right away.
     if (self.mxSession.state == MXSessionStateHomeserverNotReachable) {
         NSLog(@"server not reachable, flagging image message as failed");
@@ -941,16 +951,6 @@ NSString *const kMXRoomInitialSyncNotification = @"kMXRoomInitialSyncNotificatio
         NSLog(@"returning empty MXHTTPOperation");
 
         return operation;
-    }
-
-    // Add a local echo for this message during the sending process.
-    MXEventSentState initialSentState = (mxSession.crypto && self.summary.isEncrypted) ? MXEventSentStateEncrypting : MXEventSentStateUploading;
-    event = [self addLocalEchoForMessageContent:msgContent eventType:kMXEventTypeStringRoomMessage withState:initialSentState];
-    
-    if (localEcho)
-    {
-        // Return the created event.
-        *localEcho = event;
     }
 
     MXWeakify(self);
