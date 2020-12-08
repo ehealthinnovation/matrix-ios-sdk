@@ -928,14 +928,18 @@ NSString *const kMXRoomInitialSyncNotification = @"kMXRoomInitialSyncNotificatio
     //if the server is not reachable, fail right away.
     if (self.mxSession.state == MXSessionStateHomeserverNotReachable) {
         NSLog(@"server not reachable, flagging image message as failed");
+        NSLog(@"event: %@, eventId: %@", event, event.eventId);
 
         event.sentState = MXEventSentStateFailed;
 
-        // Update the stored echo.
+        // Update message
+        NSLog(@"updating outgoing message");
         [self updateOutgoingMessage:event.eventId withOutgoingMessage:event];
 
         MXHTTPOperation *operation;
         
+        NSLog(@"returning empty MXHTTPOperation");
+
         return operation;
     }
 
